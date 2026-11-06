@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24..48,400..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-variant": "#e0e3e6", "header-navy": "#112B42", "surface": "#f7f9fc", "on-error-container": "#93000a", "surface-container-low": "#f2f4f7", "on-secondary-fixed-variant": "#004f53", "outline-variant": "#c3c7cd", "surface-container-high": "#e6e8eb", "background": "#f7f9fc", "urgency-gold": "#C68A1B", "tertiary-fixed": "#cfe5f9", "secondary": "#00696e", "surface-bright": "#f7f9fc", "error": "#ba1a1a", "on-error": "#ffffff", "on-background": "#191c1e", "on-tertiary-container": "#7d93a5", "tertiary": "#001625", "urgency-overdue": "#941313", "on-surface-variant": "#43474d", "primary-fixed": "#cfe5ff", "on-secondary-fixed": "#002022", "surface-container-highest": "#e0e3e6", "inverse-on-surface": "#eff1f4", "secondary-container": "#94eef5", "surface-dim": "#d8dadd", "urgency-amber": "#D96520", "on-primary": "#ffffff", "on-primary-container": "#7b93ae", "inverse-surface": "#2d3133", "surface-container": "#eceef1", "secondary-fixed-dim": "#7bd5db", "text-secondary": "#566B7C", "inverse-primary": "#b0c9e6", "tertiary-container": "#162b3a", "on-secondary-container": "#006e73", "text-heading": "#14283E", "primary": "#001629", "border-hairline": "#DFE7EC", "on-secondary": "#ffffff", "on-tertiary-fixed": "#061e2c", "error-container": "#ffdad6", "secondary-fixed": "#97f1f7", "surface-container-lowest": "#ffffff", "status-completed": "#1B6D42", "brand-teal": "#0B7D83", "on-tertiary": "#ffffff", "surface-tint": "#49607a", "on-tertiary-fixed-variant": "#344959", "status-blocked": "#7D2882", "outline": "#73777d", "primary-container": "#112b42", "on-primary-fixed-variant": "#314961", "on-primary-fixed": "#011d33", "primary-fixed-dim": "#b0c9e6", "on-surface": "#191c1e", "surface-card": "#FFFFFF", "urgency-red": "#D32F2F", "tertiary-fixed-dim": "#b3c9dd" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "gutter": "1.5rem", "space-xl": "2.25rem", "margin": "2rem", "space-md": "1rem", "space-xs": "0.5rem", "space-sm": "0.75rem" }, "fontFamily": { "label-md": ["Inter"], "headline-lg": ["Manrope"], "headline-md": ["Manrope"], "body-md": ["Inter"], "body-xl": ["Inter"], "headline-sm": ["Manrope"], "label-sm": ["Inter"], "display-lg": ["Manrope"], "display-xl": ["Manrope"], "label-lg": ["Inter"], "body-lg": ["Inter"] }, "fontSize": { "label-md": ["16px", { "lineHeight": "22px", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "600" }], "body-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "body-xl": ["22px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "600" }], "label-sm": ["14px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }], "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "display-xl": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-lg": ["18px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }] } } } };</script></head><body class="bg-background font-body-lg text-body-lg text-on-surface antialiased select-none"><header class="fixed top-0 left-0 right-0 z-50 bg-header-navy text-on-primary shadow-lg border-b border-border-hairline/20"><div class="h-28 px-margin flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-lg"><div class="w-14 h-14 rounded-xl bg-brand-teal flex items-center justify-center text-on-primary shadow-md flex-shrink-0"><span class="material-symbols-outlined text-[32px]">view_kanban</span></div><div class="flex flex-col"><div class="flex items-center gap-space-sm"><span class="font-display-lg text-display-lg tracking-wider font-bold text-on-primary uppercase leading-none">Project Command Centre</span><span class="px-space-xs py-0.5 rounded bg-brand-teal/20 text-secondary-fixed border border-secondary-fixed/30 font-label-sm text-label-sm uppercase tracking-wide">75" Wall Mount</span></div><div class="flex items-center gap-space-sm mt-1 text-on-primary-container font-label-md text-label-md"><span class="w-2.5 h-2.5 rounded-full bg-status-completed ring-4 ring-status-completed/20"></span><span>Cloud Connected</span><span class="opacity-40">•</span><span>Colombo (UTC+5:30)</span><span class="opacity-40">•</span><span>Touch Host Session Active</span></div></div></div><div class="flex items-center gap-space-md bg-tertiary-container/90 border border-border-hairline/15 rounded-xl px-space-lg py-space-sm"><div class="flex items-center gap-space-sm pr-space-md border-r border-border-hairline/20"><span class="font-label-md text-label-md text-on-tertiary-container">Portfolios</span><span class="font-headline-md text-headline-md text-on-primary">12</span></div><div class="flex items-center gap-space-sm pr-space-md border-r border-border-hairline/20"><span class="w-3 h-3 rounded-full bg-urgency-amber"></span><span class="font-label-md text-label-md text-on-tertiary-container">Due Soon</span><span class="font-headline-md text-headline-md text-on-primary">5</span></div><div class="flex items-center gap-space-sm pr-space-md border-r border-border-hairline/20"><span class="w-3 h-3 rounded-full bg-urgency-red"></span><span class="font-label-md text-label-md text-on-tertiary-container">Overdue</span><span class="font-headline-md text-headline-md text-urgency-red font-bold">2</span></div><div class="flex items-center gap-space-sm"><span class="font-label-md text-label-md text-on-tertiary-container">Health</span><span class="font-headline-md text-headline-md text-status-completed font-bold">58%</span><span class="font-label-sm text-label-sm text-on-tertiary-container">Completed</span></div></div><div class="flex items-center gap-space-sm"><button class="h-14 px-space-md rounded-xl bg-surface-card text-text-heading border border-border-hairline flex items-center gap-space-xs font-label-lg text-label-lg active:scale-95 transition-transform" type="button"><span class="material-symbols-outlined text-[26px]">search</span><span>Search (Tap)</span></button><button class="h-14 px-space-md rounded-xl bg-surface-card text-text-heading border border-border-hairline flex items-center gap-space-xs font-label-lg text-label-lg active:scale-95 transition-transform" type="button"><span class="material-symbols-outlined text-[26px]">slideshow</span><span>Present</span></button><button class="h-14 w-14 rounded-xl bg-surface-card text-text-heading border border-border-hairline flex items-center justify-center active:scale-95 transition-transform" type="button"><span class="material-symbols-outlined text-[28px]">fullscreen</span></button><img alt="Profile" class="w-14 h-14 rounded-xl object-cover border-2 border-border-hairline/40 ml-space-xs" src="https://lh3.googleusercontent.com/aida/AEtjO1WgNIupqUB5dLIwHdmIsetPVCY_CeukAuEvkXdc_aYUStN3Yquu-fwXn1MNXR_BBw4Qg5UtZm3hlrW3tu82GoSCd4vanBXhwgSRROyOS_ttpsmuL6warSIFUEYsizSVvmt-Tf4kyK1RTr2tgrNjgxwdJW7wtJUhDw_opdFvJ-X4hmWgyaBU5vRvLsHu0vSYu5nW66zZl1STmCqGBLpxKz044a-CApClBXmIOc1zZ1oz"/></div></div><div class="h-14 px-margin bg-primary border-t border-border-hairline/10 flex items-center justify-between"><nav class="flex items-center gap-space-sm h-full" data-active-classes="bg-brand-teal text-on-primary font-bold shadow-sm"><a aria-current="page" class="h-11 px-space-lg rounded-lg flex items-center transition-colors bg-brand-teal text-on-primary font-bold shadow-sm" data-path="command-overview" href="#">Command Overview</a><a class="h-11 px-space-lg rounded-lg flex items-center font-label-lg text-label-lg text-on-primary-container transition-colors" data-path="tasks-urgency-radar" href="#">Tasks &amp; Urgency Radar</a><a class="h-11 px-space-lg rounded-lg flex items-center font-label-lg text-label-lg text-on-primary-container transition-colors" data-path="cloud-backups" href="#">Cloud &amp; Backups</a></nav><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-primary-container font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-status-completed animate-pulse"></span><span>All Systems Operational</span><span class="opacity-40">•</span><span>Cloud Synced 2m ago</span></div><div class="h-6 w-px bg-border-hairline/20"></div><button class="h-10 px-space-md rounded-lg bg-brand-teal text-on-primary flex items-center gap-space-xs font-label-md text-label-md active:scale-95 transition-transform" type="button"><span class="material-symbols-outlined text-[20px]">add</span><span>Category</span></button><button class="h-10 px-space-md rounded-lg bg-surface-card text-text-heading flex items-center gap-space-xs font-label-md text-label-md active:scale-95 transition-transform" type="button"><span class="material-symbols-outlined text-[20px]">add_task</span><span>Quick Task</span></button></div></div></header><aside class="fixed left-0 top-42 bottom-0 w-72 bg-surface-card border-r border-border-hairline z-40 flex flex-col justify-between p-space-md"><div class="flex flex-col gap-space-md"><div class="px-space-sm py-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-text-secondary">Project Portfolios</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-bold"><a class="h-14 px-space-md rounded-xl flex items-center text-text-heading font-label-md text-label-md hover:bg-surface-container-high transition-colors" data-path="enterprise-core" href="#"><span class="w-3 h-3 rounded-full bg-brand-teal mr-space-md"></span><span>Enterprise Core (Q3)</span></a><a class="h-14 px-space-md rounded-xl flex items-center text-text-heading font-label-md text-label-md hover:bg-surface-container-high transition-colors" data-path="infrastructure-rollout" href="#"><span class="w-3 h-3 rounded-full bg-status-blocked mr-space-md"></span><span>Infra Modernization</span></a><a class="h-14 px-space-md rounded-xl flex items-center text-text-heading font-label-md text-label-md hover:bg-surface-container-high transition-colors" data-path="client-deliverables" href="#"><span class="w-3 h-3 rounded-full bg-urgency-gold mr-space-md"></span><span>Global Deliverables</span></a><a class="h-14 px-space-md rounded-xl flex items-center text-text-heading font-label-md text-label-md hover:bg-surface-container-high transition-colors" data-path="security-audit" href="#"><span class="w-3 h-3 rounded-full bg-status-completed mr-space-md"></span><span>Audit &amp; Compliance</span></a></nav></div><div class="p-space-md bg-surface-container-low rounded-xl border border-border-hairline"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-sm text-label-sm text-text-secondary">Interactive Touch</span><span class="px-2 py-0.5 rounded bg-status-completed/10 text-status-completed font-label-sm text-label-sm font-semibold">Ready</span></div><p class="font-body-md text-body-md text-text-secondary">Stylus &amp; Multi-finger Gestures Calibrated</p></div></aside><div class="pl-72"><main class="relative pt-42 bg-background min-h-screen px-margin py-space-xl"><div class="flex flex-col w-full relative">
+<!-- DIMMED BACKGROUND COMMAND BOARD UNDERLAY -->
+<div class="w-full grid grid-cols-12 gap-space-lg select-none opacity-40 pointer-events-none transition-opacity duration-300" id="dimmedUnderlay">
+<div class="col-span-12 flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-md">
+<span class="w-3.5 h-3.5 rounded-full bg-brand-teal"></span>
+<span class="font-display-lg text-display-lg text-text-heading">Digital Health Initiative</span>
+<span class="bg-surface-container-high text-text-secondary px-space-md py-1 rounded-full font-label-md text-label-md">Port-DH204</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-label-lg text-label-lg text-text-secondary">Viewing Global Lane · Touch Node #4</span>
+</div>
+</div>
+<!-- Background Underlay Tiles (Mock of main board) -->
+<div class="col-span-4 bg-surface-card rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex justify-between items-center">
+<span class="font-headline-sm text-headline-sm text-text-heading">E-Prescription Gateway</span>
+<span class="bg-status-completed/15 text-status-completed px-space-sm py-1 rounded font-label-sm text-label-sm">88% Ready</span>
+</div>
+<div class="h-3 rounded-full bg-surface-container-high overflow-hidden">
+<div class="bg-status-completed h-full w-[88%]"></div>
+</div>
+<div class="text-text-secondary font-body-md text-body-md">Clinical dispatch engine certification completed. Next sync: 16:00.</div>
+</div>
+<div class="col-span-4 bg-surface-card rounded-xl p-space-lg shadow-md ring-4 ring-brand-teal/20 flex flex-col gap-space-md">
+<div class="flex justify-between items-center">
+<span class="font-headline-sm text-headline-sm text-brand-teal">Registry Integration</span>
+<span class="bg-brand-teal/15 text-brand-teal px-space-sm py-1 rounded font-label-sm text-label-sm">Active Drawer</span>
+</div>
+<div class="h-3 rounded-full bg-surface-container-high overflow-hidden">
+<div class="bg-brand-teal h-full w-[67%]"></div>
+</div>
+<div class="text-text-secondary font-body-md text-body-md">FHIR schema bridge &amp; National Health Index syncer. Selected on display.</div>
+</div>
+<div class="col-span-4 bg-surface-card rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex justify-between items-center">
+<span class="font-headline-sm text-headline-sm text-text-heading">Telemedicine Node Sri Lanka</span>
+<span class="bg-urgency-amber/15 text-urgency-amber px-space-sm py-1 rounded font-label-sm text-label-sm">Attention Needed</span>
+</div>
+<div class="h-3 rounded-full bg-surface-container-high overflow-hidden">
+<div class="bg-urgency-amber h-full w-[42%]"></div>
+</div>
+<div class="text-text-secondary font-body-md text-body-md">Bandwidth testing across Uva Province nodes pending approval.</div>
+</div>
+</div>
+<!-- MODAL SCRIM DOCKED OVERLAY -->
+<div class="fixed inset-0 bg-primary/50 backdrop-blur-sm z-50 transition-opacity duration-300" id="drawerBackdrop" onclick="closeDrawer()"></div>
+<!-- RIGHT DOCKED EXPANDED TASK & PROJECT INSPECTION DRAWER (75" Wall Mount Touch Profile) -->
+<aside class="fixed top-0 right-0 bottom-0 w-[1140px] max-w-[94vw] bg-surface-bright shadow-2xl z-50 flex flex-col transition-transform duration-300 ease-out overflow-hidden" id="projectDrawer">
+<!-- DRAWER HEADER (High Contrast Executive Navy Zone - Arm Reach dismissable) -->
+<div class="bg-header-navy text-on-primary px-margin py-space-lg flex-shrink-0 flex items-start justify-between shadow-md">
+<div class="flex flex-col gap-space-xs max-w-[780px]">
+<!-- Breadcrumb & Category Meta -->
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded bg-brand-teal text-on-primary font-label-sm text-label-sm tracking-wide uppercase">
+<span class="material-symbols-outlined text-[16px]">folder_special</span>
+            Digital Health
+          </span>
+<span class="text-on-primary-container font-label-sm text-label-sm">/ Portfolio Track DH-204</span>
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary-container"></span>
+<span class="text-secondary-fixed font-label-sm text-label-sm">Priority Stream 1</span>
+</div>
+<!-- Project Title -->
+<h1 class="font-display-xl text-display-xl text-on-primary font-bold tracking-tight mt-1 flex items-center gap-space-sm">
+          Registry Integration
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container-highest/20 text-on-primary" title="Synced to Enterprise Core">
+<span class="material-symbols-outlined text-[20px]">sync</span>
+</span>
+</h1>
+<!-- Project Owner Reassign Tactile Trigger -->
+<div class="flex items-center gap-space-md mt-space-xs">
+<div class="inline-flex items-center gap-space-sm bg-tertiary-container/90 px-space-md py-1.5 rounded-lg">
+<div class="w-8 h-8 rounded-full bg-brand-teal text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold shadow-sm">
+              KM
+            </div>
+<div class="flex flex-col">
+<span class="text-on-tertiary-container text-label-sm font-label-sm leading-tight">Project Owner</span>
+<span class="text-on-primary font-label-md text-label-md font-semibold leading-tight">K. Mendis</span>
+</div>
+<button class="ml-space-xs w-9 h-9 rounded-lg bg-surface-card/10 text-on-primary flex items-center justify-center active:scale-90 transition-transform" onclick="showOwnerSwitcher(event)" title="Reassign Project Lead" type="button">
+<span class="material-symbols-outlined text-[20px]">swap_horiz</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs text-on-primary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Security Level 3 · Restricted Access</span>
+</div>
+</div>
+</div>
+<!-- Close Drawer Button (Tactile 64x64px touch target) -->
+<div class="flex items-center gap-space-sm">
+<button aria-label="Close Drawer" class="w-16 h-16 rounded-xl bg-surface-card/10 text-on-primary flex items-center justify-center active:scale-95 transition-all shadow-sm" onclick="closeDrawer()" type="button">
+<span class="material-symbols-outlined text-[36px]">close</span>
+</button>
+</div>
+</div>
+<!-- DRAWER SUB-HEADER METRICS & PROGRESS TRACKER -->
+<div class="bg-surface-container-lowest px-margin py-space-md flex-shrink-0 shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-baseline gap-space-md">
+<span class="font-headline-lg text-headline-lg text-text-heading font-bold">6 of 9 tasks completed</span>
+<span class="font-headline-md text-headline-md text-status-completed font-semibold">(67%)</span>
+</div>
+<div class="flex items-center gap-space-lg text-text-secondary font-label-md text-label-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-urgency-overdue"></span>
+<span>1 Overdue</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-urgency-red"></span>
+<span>1 Imminent</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-status-blocked"></span>
+<span>1 Blocked</span>
+</div>
+</div>
+</div>
+<!-- Segmented Tactile Progress Bar (9 visible segments representing tasks) -->
+<div class="grid grid-cols-9 gap-1.5 h-4 w-full bg-surface-container-high rounded-full p-1">
+<div class="bg-status-completed rounded-full h-full" title="Task 1: Complete"></div>
+<div class="bg-status-completed rounded-full h-full" title="Task 2: Complete"></div>
+<div class="bg-status-completed rounded-full h-full" title="Task 3: Complete"></div>
+<div class="bg-status-completed rounded-full h-full" title="Task 4: Complete"></div>
+<div class="bg-status-completed rounded-full h-full" title="Task 5: Complete"></div>
+<div class="bg-status-completed rounded-full h-full" title="Task 6: Complete"></div>
+<div class="bg-urgency-overdue rounded-full h-full animate-pulse" title="Task 7: Overdue"></div>
+<div class="bg-urgency-red rounded-full h-full" title="Task 8: Imminent Due"></div>
+<div class="bg-status-blocked rounded-full h-full" title="Task 9: Blocked"></div>
+</div>
+<!-- Operational Action Bar (Min 56px height touch targets) -->
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-md">
+<button class="h-14 px-space-lg rounded-xl bg-brand-teal text-on-primary flex items-center gap-space-sm font-label-lg text-label-lg active:scale-95 transition-all shadow-md" onclick="openNewTaskModal()" type="button">
+<span class="material-symbols-outlined text-[24px]">add_circle</span>
+<span>+ Add Task to Project</span>
+</button>
+<button class="h-14 px-space-md rounded-xl bg-surface-container text-text-heading flex items-center gap-space-xs font-label-md text-label-md active:scale-95 transition-all" onclick="cycleFilter(this)" type="button">
+<span class="material-symbols-outlined text-[22px]">tune</span>
+<span id="filterLabel">Filter: All Tasks (9)</span>
+</button>
+<button class="h-14 px-space-md rounded-xl bg-surface-container text-text-heading flex items-center gap-space-xs font-label-md text-label-md active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[22px]">swap_vert</span>
+<span>Sort: Urgency Radar</span>
+</button>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="h-14 px-space-md rounded-xl bg-surface-card text-text-heading shadow-sm flex items-center gap-space-xs font-label-md text-label-md active:scale-95 transition-all" onclick="moveCategoryNotice()" type="button">
+<span class="material-symbols-outlined text-[22px]">drive_file_move</span>
+<span>Move to Category</span>
+</button>
+<button class="h-14 px-space-md rounded-xl bg-error-container text-on-error-container flex items-center gap-space-xs font-label-md text-label-md active:scale-95 transition-all" onclick="confirmArchiveSafe()" title="Archive Project safely" type="button">
+<span class="material-symbols-outlined text-[22px]">archive</span>
+<span>Archive</span>
+</button>
+</div>
+</div>
+</div>
+<!-- MAIN SCROLLABLE TASK RADAR DECK (Touch Optimized 76px - 88px rows) -->
+<div class="flex-1 overflow-y-auto px-margin py-space-lg flex flex-col gap-space-md bg-surface">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-text-heading font-bold">Action Queue &amp; Urgency Stack</span>
+<span class="px-space-sm py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">Ordered by Deadlines</span>
+</div>
+<span class="text-text-secondary font-label-sm text-label-sm">Tap any row or status selector to edit directly</span>
+</div>
+<!-- TASK 3 (CRITICAL OVERDUE): Production API stress test & benchmark -->
+<!-- Explicit 6px left semantic accent bar via overflow styling -->
+<div class="task-row group relative h-[86px] bg-surface-card rounded-xl shadow-sm hover:shadow-md transition-all flex items-center pl-0 pr-space-lg overflow-hidden active:bg-brand-teal/5">
+<!-- 6px Urgent semantic accent -->
+<div class="w-[6px] self-stretch bg-urgency-overdue flex-shrink-0"></div>
+<div class="flex items-center justify-between w-full pl-space-md">
+<!-- Task Info & Assignee -->
+<div class="flex flex-col gap-1 min-w-[340px] max-w-[420px]">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-urgency-overdue text-[20px]">error</span>
+<span class="font-headline-sm text-headline-sm text-text-heading font-bold truncate">Production API stress test &amp; benchmark</span>
+</div>
+<div class="flex items-center gap-space-md text-text-secondary font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-full bg-header-navy text-on-primary flex items-center justify-center font-bold text-[11px]">TS</span>
+<span class="font-medium text-text-heading">T. Silva</span>
+</div>
+<span>•</span>
+<span class="text-urgency-overdue font-semibold">Due: Yesterday, 5:00 PM</span>
+<span>•</span>
+<span>Lead window: 7 days</span>
+</div>
+</div>
+<!-- Urgency Dynamic Badge -->
+<div class="flex items-center">
+<span class="min-h-[40px] px-space-md rounded-xl bg-urgency-overdue text-on-error flex items-center gap-1.5 font-label-md text-label-md font-bold shadow-sm">
+<span class="material-symbols-outlined text-[20px]">report</span>
+              Overdue by 18 hours
+            </span>
+</div>
+<!-- Interactive Status Selector (Large Touch Target 52px) -->
+<div class="relative">
+<button class="h-13 px-space-md rounded-xl bg-primary-container text-on-primary flex items-center gap-space-xs font-label-md text-label-md active:scale-95 transition-all" onclick="toggleStatusDropdown('status-3')" type="button">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed"></span>
+<span id="label-status-3">In Progress</span>
+<span class="material-symbols-outlined text-[20px]">arrow_drop_down</span>
+</button>
+<div class="hidden absolute right-0 top-14 w-48 bg-surface-card rounded-xl shadow-2xl p-1 z-30 flex flex-col gap-1" id="dropdown-status-3">
+<button class="h-11 px-3 rounded-lg text-left font-label-sm text-label-sm hover:bg-surface-container flex items-center gap-2" onclick="setStatus('status-3', 'Not Started', 'bg-text-secondary')">
+<span class="w-2.5 h-2.5 rounded-full bg-outline"></span> Not Started
+              </button>
+<button class="h-11 px-3 rounded-lg text-left font-label-sm text-label-sm hover:bg-surface-container flex items-center gap-2" onclick="setStatus('status-3', 'In Progress', 'bg-brand-teal')">
+<span class="w-2.5 h-2.5 rounded-full bg-brand-teal"></span> In Progress
+              </button>
+<button class="h-11 px-3 rounded-lg text-left font-label-sm text-label-sm hover:bg-surface-container flex items-center gap-2" onclick="setStatus('status-3', 'Blocked', 'bg-status-blocked')">
+<span class="w-2.5 h-2.5 rounded-full bg-status-blocked"></span> Blocked
+              </button>
+<button class="h-11 px-3 rounded-lg text-left font-label-sm text-label-sm hover:bg-surface-container flex items-center gap-2" onclick="setStatus('status-3', 'Completed', 'bg-status-completed')">
+<span class="w-2.5 h-2.5 rounded-full bg-status-completed"></span> Completed
+              </button>
+</div>
+</div>
+<!-- Touch Row Actions -->
+<div class="flex items-center gap-space-xs">
+<button class="w-12 h-12 rounded-xl bg-surface-container-high text-text-heading flex items-center justify-center active:scale-95 transition-transform" onclick="inspectTaskDetail('Production API stress test')" title="Task Details" type="button">
+<span class="material-symbols-outlined text-[22px]">edit</span>
+</button>
+<button class="w-12 h-12 rounded-xl bg-surface-container-high text-text-heading flex items-center justify-center active:scale-95 transition-transform" title="More options" type="button">
+<span class="material-symbols-outlined text-[22px]">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<!-- TASK 1 (DUE TODAY): Complete data mapping & FHIR schema -->
+<div class="task-row group relative h-[86px] bg-surface-card rounded-xl shadow-sm hover:shadow-md transition-all flex items-center pl-0 pr-space-lg overflow-hidden active:bg-brand-teal/5">
+<div class="w-[6px] self-stretch bg-urgency-red flex-shrink-0"></div>
+<div class="flex items-center justify-between w-full pl-space-md">
+<div class="flex flex-col gap-1 min-w-[340px] max-w-[420px]">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-text-heading font-bold truncate">Complete data mapping &amp; FHIR schema</span>
+</div>
+<div class="flex items-center gap-space-md text-text-secondary font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-full bg-header-navy text-on-primary flex items-center justify-center font-bold text-[11px]">AP</span>
+<span class="font-medium text-text-heading">A. Perera</span>
+</div>
+<span>•</span>
+<span class="text-urgency-red font-semibold">Due: Today, 2:30 PM (in 3 hrs)</span>
+<span>•</span>
+<span>Lead window: 14 days (92% elapsed)</span>
+</div>
+</div>
+<!-- Urgency Dynamic Badge: Vibrant Red -->
+<div class="flex items-center">
+<span class="min-h-[40px] px-space-md rounded-xl bg-urgency-red text-on-error flex items-center gap-1.5 font-label-md text-label-md font-bold shadow-sm">
+<span class="material-symbols-outlined text-[20px]">alarm</span>
+              Due in 3 hours
+            </span>
+</div>
+<!-- Status Selector -->
+<div class="relative">
+<button class="h-13 px-space-md rounded-xl bg-primary-container text-on-primary flex items-center gap-space-xs font-label-md text-label-md active:scale-95 transition-all" onclick="toggleStatusDropdown('status-1')" type="button">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed"></span>
+<span id="label-status-1">In Progress</span>
+<span class="material-symbols-outlined text-[20px]">arrow_drop_down</span>
+</button>
+<div class="hidden absolute right-0 top-14 w-48 bg-surface-card rounded-xl shadow-2xl p-1 z-30 flex flex-col gap-1" id="dropdown-status-1">
+<button class="h-11 px-3 rounded-lg text-left font-label-sm text-label-sm hover:bg-surface-container flex items-center gap-2" onclick="setStatus('status-1', 'Not Started', 'bg-text-secondary')">
+<span class="w-2.5 h-2.5 rounded-full bg-outline"></span> Not Started
+              </button>
+<button class="h-11 px-3 rounded-lg text-left font-label-sm text-label-sm hover:bg-surface-container flex items-center gap-2" onclick="setStatus('status-1', 'In Progress', 'bg-brand-teal')">
+<span class="w-2.5 h-2.5 rounded-full bg-brand-teal"></span> In Progress
+              </button>
+<button class="h-11 px-3 rounded-lg text-left font-label-sm text-label-sm hover:bg-surface-container flex items-center gap-2" onclick="setStatus('status-1', 'Blocked', 'bg-status-blocked')">
+<span class="w-2.5 h-2.5 rounded-full bg-status-blocked"></span> Blocked
+              </button>
+<button class="h-11 px-3 rounded-lg text-left font-label-sm text-label-sm hover:bg-surface-container flex items-center gap-2" onclick="setStatus('status-1', 'Completed', 'bg-status-completed')">
+<span class="w-2.5 h-2.5 rounded-full bg-status-completed"></span> Completed
+              </button>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="w-12 h-12 rounded-xl bg-surface-container-high text-text-heading flex items-center justify-center active:scale-95 transition-transform" onclick="inspectTaskDetail('Complete data mapping')" title="Task Details" type="button">
+<span class="material-symbols-outlined text-[22px]">edit</span>
+</button>
+<button class="w-12 h-12 rounded-xl bg-surface-container-high text-text-heading flex items-center justify-center active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[22px]">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<!-- TASK 2 (BLOCKED & IMMINENT): DHIS2 Gateway TLS handshake configuration -->
+<div class="task-row group relative h-[86px] bg-surface-card rounded-xl shadow-sm hover:shadow-md transition-all flex items-center pl-0 pr-space-lg overflow-hidden active:bg-brand-teal/5">
+<div class="w-[6px] self-stretch bg-status-blocked flex-shrink-0"></div>
+<div class="flex items-center justify-between w-full pl-space-md">
+<div class="flex flex-col gap-1 min-w-[340px] max-w-[420px]">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-text-heading font-bold truncate">DHIS2 Gateway TLS handshake configuration</span>
+</div>
+<div class="flex items-center gap-space-md text-text-secondary font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-full bg-brand-teal text-on-primary flex items-center justify-center font-bold text-[11px]">KM</span>
+<span class="font-medium text-text-heading">K. Mendis</span>
+</div>
+<span>•</span>
+<span class="text-urgency-amber font-semibold">Due: Tomorrow, 9:00 AM</span>
+<span>•</span>
+<span>Lead window: 3 days</span>
+</div>
+</div>
+<!-- Dual Urgency & Blocked Badges -->
+<div class="flex items-center gap-space-sm">
+<span class="min-h-[40px] px-space-md rounded-xl bg-urgency-amber text-on-primary flex items-center gap-1.5 font-label-md text-label-md font-bold shadow-sm">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+              Due in 18 hours
+            </span>
+<span class="min-h-[40px] px-space-md rounded-xl bg-status-blocked text-on-primary flex items-center gap-1.5 font-label-md text-label-md font-bold shadow-sm">
+<span class="material-symbols-outlined text-[20px]">do_not_disturb_on</span>
+              Blocked
+            </span>
+</div>
+<!-- Status Selector: Blocked State -->
+<div class="relative">
+<button class="h-13 px-space-md rounded-xl bg-status-blocked text-on-primary flex items-center gap-space-xs font-label-md text-label-md active:scale-95 transition-all" onclick="toggleStatusDropdown('status-2')" type="button">
+<span class="w-2.5 h-2.5 rounded-full bg-on-primary"></span>
+<span id="label-status-2">Blocked</span>
+<span class="material-symbols-outlined text-[20px]">arrow_drop_down</span>
+</button>
+<div class="hidden absolute right-0 top-14 w-48 bg-surface-card rounded-xl shadow-2xl p-1 z-30 flex flex-col gap-1" id="dropdown-status-2">
+<button class="h-11 px-3 rounded-lg text-left font-label-sm text-label-sm hover:bg-surface-container flex items-center gap-2" onclick="setStatus('status-2', 'Not Started', 'bg-text-secondary')">
+<span class="w-2.5 h-2.5 rounded-full bg-outline"></span> Not Started
+              </button>
+<button class="h-11 px-3 rounded-lg text-left font-label-sm text-label-sm hover:bg-surface-container flex items-center gap-2" onclick="setStatus('status-2', 'In Progress', 'bg-brand-teal')">
+<span class="w-2.5 h-2.5 rounded-full bg-brand-teal"></span> In Progress
+              </button>
+<button class="h-11 px-3 rounded-lg text-left font-label-sm text-label-sm hover:bg-surface-container flex items-center gap-2" onclick="setStatus('status-2', 'Blocked', 'bg-status-blocked')">
+<span class="w-2.5 h-2.5 rounded-full bg-status-blocked"></span> Blocked
+              </button>
+<button class="h-11 px-3 rounded-lg text-left font-label-sm text-label-sm hover:bg-surface-container flex items-center gap-2" onclick="setStatus('status-2', 'Completed', 'bg-status-completed')">
+<span class="w-2.5 h-2.5 rounded-full bg-status-completed"></span> Completed
+              </button>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="w-12 h-12 rounded-xl bg-surface-container-high text-text-heading flex items-center justify-center active:scale-95 transition-transform" onclick="inspectTaskDetail('DHIS2 Gateway TLS handshake')" title="Task Details" type="button">
+<span class="material-symbols-outlined text-[22px]">edit</span>
+</button>
+<button class="w-12 h-12 rounded-xl bg-surface-container-high text-text-heading flex items-center justify-center active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[22px]">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<!-- TASK 4: Sign-off security vulnerability matrix -->
+<div class="task-row group relative h-[86px] bg-surface-card rounded-xl shadow-sm hover:shadow-md transition-all flex items-center pl-0 pr-space-lg overflow-hidden active:bg-brand-teal/5">
+<div class="w-[6px] self-stretch bg-urgency-gold flex-shrink-0"></div>
+<div class="flex items-center justify-between w-full pl-space-md">
+<div class="flex flex-col gap-1 min-w-[340px] max-w-[420px]">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-text-heading font-bold truncate">Sign-off security vulnerability matrix</span>
+</div>
+<div class="flex items-center gap-space-md text-text-secondary font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-full bg-header-navy text-on-primary flex items-center justify-center font-bold text-[11px]">SW</span>
+<span class="font-medium text-text-heading">S. Wickramasinghe</span>
+</div>
+<span>•</span>
+<span class="text-text-heading font-medium">Due: Fri 13 Nov, 11:00 AM</span>
+<span>•</span>
+<span>Lead window: 14 days</span>
+</div>
+</div>
+<!-- Urgency Gold Badge -->
+<div class="flex items-center">
+<span class="min-h-[40px] px-space-md rounded-xl bg-urgency-gold text-on-primary flex items-center gap-1.5 font-label-md text-label-md font-bold shadow-sm">
+<span class="material-symbols-outlined text-[20px]">hourglass_top</span>
+              Due in 5 days
+            </span>
+</div>
+<!-- Status Selector: Not Started -->
+<div class="relative">
+<button class="h-13 px-space-md rounded-xl bg-surface-container-high text-text-heading flex items-center gap-space-xs font-label-md text-label-md active:scale-95 transition-all" onclick="toggleStatusDropdown('status-4')" type="button">
+<span class="w-2.5 h-2.5 rounded-full bg-outline"></span>
+<span id="label-status-4">Not Started</span>
+<span class="material-symbols-outlined text-[20px]">arrow_drop_down</span>
+</button>
+<div class="hidden absolute right-0 top-14 w-48 bg-surface-card rounded-xl shadow-2xl p-1 z-30 flex flex-col gap-1" id="dropdown-status-4">
+<button class="h-11 px-3 rounded-lg text-left font-label-sm text-label-sm hover:bg-surface-container flex items-center gap-2" onclick="setStatus('status-4', 'Not Started', 'bg-text-secondary')">
+<span class="w-2.5 h-2.5 rounded-full bg-outline"></span> Not Started
+              </button>
+<button class="h-11 px-3 rounded-lg text-left font-label-sm text-label-sm hover:bg-surface-container flex items-center gap-2" onclick="setStatus('status-4', 'In Progress', 'bg-brand-teal')">
+<span class="w-2.5 h-2.5 rounded-full bg-brand-teal"></span> In Progress
+              </button>
+<button class="h-11 px-3 rounded-lg text-left font-label-sm text-label-sm hover:bg-surface-container flex items-center gap-2" onclick="setStatus('status-4', 'Blocked', 'bg-status-blocked')">
+<span class="w-2.5 h-2.5 rounded-full bg-status-blocked"></span> Blocked
+              </button>
+<button class="h-11 px-3 rounded-lg text-left font-label-sm text-label-sm hover:bg-surface-container flex items-center gap-2" onclick="setStatus('status-4', 'Completed', 'bg-status-completed')">
+<span class="w-2.5 h-2.5 rounded-full bg-status-completed"></span> Completed
+              </button>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="w-12 h-12 rounded-xl bg-surface-container-high text-text-heading flex items-center justify-center active:scale-95 transition-transform" onclick="inspectTaskDetail('Security vulnerability matrix')" title="Task Details" type="button">
+<span class="material-symbols-outlined text-[22px]">edit</span>
+</button>
+<button class="w-12 h-12 rounded-xl bg-surface-container-high text-text-heading flex items-center justify-center active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[22px]">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<!-- TASK 5: Submit Cloud Gateway architectural memo -->
+<div class="task-row group relative h-[86px] bg-surface-card rounded-xl shadow-sm hover:shadow-md transition-all flex items-center pl-0 pr-space-lg overflow-hidden active:bg-brand-teal/5">
+<div class="w-[6px] self-stretch bg-brand-teal/30 flex-shrink-0"></div>
+<div class="flex items-center justify-between w-full pl-space-md">
+<div class="flex flex-col gap-1 min-w-[340px] max-w-[420px]">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-text-heading font-bold truncate">Submit Cloud Gateway architectural memo</span>
+</div>
+<div class="flex items-center gap-space-md text-text-secondary font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-full bg-brand-teal text-on-primary flex items-center justify-center font-bold text-[11px]">KM</span>
+<span class="font-medium text-text-heading">K. Mendis</span>
+</div>
+<span>•</span>
+<span class="text-text-heading font-medium">Due: 28 Nov 2026, 4:00 PM</span>
+<span>•</span>
+<span class="text-secondary">Lead window: 1 day (Inactive)</span>
+</div>
+</div>
+<!-- Calm Neutral / Lead window inactive badge -->
+<div class="flex items-center">
+<span class="min-h-[40px] px-space-md rounded-xl bg-surface-container-high text-text-heading flex items-center gap-1.5 font-label-md text-label-md font-medium">
+<span class="material-symbols-outlined text-[20px] text-text-secondary">calendar_today</span>
+              Due in 20 days
+            </span>
+</div>
+<!-- Status Selector: Not Started -->
+<div class="relative">
+<button class="h-13 px-space-md rounded-xl bg-surface-container-high text-text-heading flex items-center gap-space-xs font-label-md text-label-md active:scale-95 transition-all" onclick="toggleStatusDropdown('status-5')" type="button">
+<span class="w-2.5 h-2.5 rounded-full bg-outline"></span>
+<span id="label-status-5">Not Started</span>
+<span class="material-symbols-outlined text-[20px]">arrow_drop_down</span>
+</button>
+<div class="hidden absolute right-0 top-14 w-48 bg-surface-card rounded-xl shadow-2xl p-1 z-30 flex flex-col gap-1" id="dropdown-status-5">
+<button class="h-11 px-3 rounded-lg text-left font-label-sm text-label-sm hover:bg-surface-container flex items-center gap-2" onclick="setStatus('status-5', 'Not Started', 'bg-text-secondary')">
+<span class="w-2.5 h-2.5 rounded-full bg-outline"></span> Not Started
+              </button>
+<button class="h-11 px-3 rounded-lg text-left font-label-sm text-label-sm hover:bg-surface-container flex items-center gap-2" onclick="setStatus('status-5', 'In Progress', 'bg-brand-teal')">
+<span class="w-2.5 h-2.5 rounded-full bg-brand-teal"></span> In Progress
+              </button>
+<button class="h-11 px-3 rounded-lg text-left font-label-sm text-label-sm hover:bg-surface-container flex items-center gap-2" onclick="setStatus('status-5', 'Blocked', 'bg-status-blocked')">
+<span class="w-2.5 h-2.5 rounded-full bg-status-blocked"></span> Blocked
+              </button>
+<button class="h-11 px-3 rounded-lg text-left font-label-sm text-label-sm hover:bg-surface-container flex items-center gap-2" onclick="setStatus('status-5', 'Completed', 'bg-status-completed')">
+<span class="w-2.5 h-2.5 rounded-full bg-status-completed"></span> Completed
+              </button>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="w-12 h-12 rounded-xl bg-surface-container-high text-text-heading flex items-center justify-center active:scale-95 transition-transform" onclick="inspectTaskDetail('Submit Cloud Gateway memo')" title="Task Details" type="button">
+<span class="material-symbols-outlined text-[22px]">edit</span>
+</button>
+<button class="w-12 h-12 rounded-xl bg-surface-container-high text-text-heading flex items-center justify-center active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[22px]">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<!-- TASK 6: Deploy staging schema validator (Completed Task) -->
+<div class="task-row group relative h-[86px] bg-surface-container-lowest/80 rounded-xl shadow-sm hover:shadow-md transition-all flex items-center pl-0 pr-space-lg overflow-hidden active:bg-brand-teal/5">
+<div class="w-[6px] self-stretch bg-status-completed flex-shrink-0"></div>
+<div class="flex items-center justify-between w-full pl-space-md opacity-80 group-hover:opacity-100 transition-opacity">
+<div class="flex flex-col gap-1 min-w-[340px] max-w-[420px]">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-status-completed text-[20px]">check_circle</span>
+<span class="font-headline-sm text-headline-sm text-text-heading font-semibold line-through decoration-text-secondary/40 truncate">Deploy staging schema validator</span>
+</div>
+<div class="flex items-center gap-space-md text-text-secondary font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-full bg-header-navy text-on-primary flex items-center justify-center font-bold text-[11px]">AP</span>
+<span class="font-medium text-text-heading">A. Perera</span>
+</div>
+<span>•</span>
+<span class="text-status-completed font-medium">Completed at 10 Nov 2026</span>
+<span>•</span>
+<span>Signed &amp; Verified</span>
+</div>
+</div>
+<!-- Completed State Overriding Urgency -->
+<div class="flex items-center">
+<span class="min-h-[40px] px-space-md rounded-xl bg-status-completed/15 text-status-completed flex items-center gap-1.5 font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+              Resolved &amp; Signed
+            </span>
+</div>
+<!-- Status Selector: Completed -->
+<div class="relative">
+<button class="h-13 px-space-md rounded-xl bg-status-completed text-on-primary flex items-center gap-space-xs font-label-md text-label-md active:scale-95 transition-all" onclick="toggleStatusDropdown('status-6')" type="button">
+<span class="material-symbols-outlined text-[18px]">check</span>
+<span id="label-status-6">Completed</span>
+<span class="material-symbols-outlined text-[20px]">arrow_drop_down</span>
+</button>
+<div class="hidden absolute right-0 top-14 w-48 bg-surface-card rounded-xl shadow-2xl p-1 z-30 flex flex-col gap-1" id="dropdown-status-6">
+<button class="h-11 px-3 rounded-lg text-left font-label-sm text-label-sm hover:bg-surface-container flex items-center gap-2" onclick="setStatus('status-6', 'Not Started', 'bg-text-secondary')">
+<span class="w-2.5 h-2.5 rounded-full bg-outline"></span> Not Started
+              </button>
+<button class="h-11 px-3 rounded-lg text-left font-label-sm text-label-sm hover:bg-surface-container flex items-center gap-2" onclick="setStatus('status-6', 'In Progress', 'bg-brand-teal')">
+<span class="w-2.5 h-2.5 rounded-full bg-brand-teal"></span> In Progress
+              </button>
+<button class="h-11 px-3 rounded-lg text-left font-label-sm text-label-sm hover:bg-surface-container flex items-center gap-2" onclick="setStatus('status-6', 'Blocked', 'bg-status-blocked')">
+<span class="w-2.5 h-2.5 rounded-full bg-status-blocked"></span> Blocked
+              </button>
+<button class="h-11 px-3 rounded-lg text-left font-label-sm text-label-sm hover:bg-surface-container flex items-center gap-2" onclick="setStatus('status-6', 'Completed', 'bg-status-completed')">
+<span class="w-2.5 h-2.5 rounded-full bg-status-completed"></span> Completed
+              </button>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="w-12 h-12 rounded-xl bg-surface-container-high text-text-heading flex items-center justify-center active:scale-95 transition-transform" onclick="inspectTaskDetail('Deploy staging validator')" title="Task Details" type="button">
+<span class="material-symbols-outlined text-[22px]">edit</span>
+</button>
+<button class="w-12 h-12 rounded-xl bg-surface-container-high text-text-heading flex items-center justify-center active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[22px]">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- DRAWER FOOTER COMMAND STRIP (Always Accessible at physical bottom) -->
+<div class="bg-surface-card px-margin py-space-md flex-shrink-0 flex items-center justify-between shadow-lg">
+<div class="flex items-center gap-space-md">
+<span class="flex items-center gap-2 text-text-secondary font-label-sm text-label-sm">
+<span class="w-3 h-3 rounded-full bg-status-completed"></span>
+          Direct DB Replication Active
+        </span>
+<span class="text-text-secondary font-label-sm text-label-sm">•</span>
+<span class="text-text-secondary font-label-sm text-label-sm">Display Resolution: 3840×2160 UHD Native</span>
+</div>
+<div class="flex items-center gap-space-md">
+<button class="h-14 px-space-xl rounded-xl bg-surface-container text-text-heading font-label-lg text-label-lg active:scale-95 transition-all" onclick="closeDrawer()" type="button">
+          Back to Command Canvas
+        </button>
+<button class="h-14 px-space-xl rounded-xl bg-brand-teal text-on-primary font-label-lg text-label-lg font-bold shadow-md active:scale-95 transition-all" onclick="saveProjectChanges()" type="button">
+          Done &amp; Sync
+        </button>
+</div>
+</div>
+</aside>
+<!-- REASSIGN OWNER MODAL OVERLAY (Contextual Touch Dialog) -->
+<div class="hidden fixed inset-0 z-50 bg-primary/40 backdrop-blur-sm flex items-center justify-center" id="ownerModal">
+<div class="bg-surface-card rounded-xl p-space-xl shadow-2xl w-[540px] flex flex-col gap-space-lg">
+<div class="flex justify-between items-center">
+<div>
+<h2 class="font-headline-md text-headline-md text-text-heading font-bold">Reassign Project Owner</h2>
+<p class="font-body-md text-body-md text-text-secondary mt-1">Select an authenticated mission lead</p>
+</div>
+<button class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center" onclick="closeOwnerModal()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="h-18 p-space-md rounded-xl bg-surface-container flex items-center justify-between cursor-pointer active:scale-98" onclick="selectOwner('K. Mendis')">
+<div class="flex items-center gap-space-md">
+<span class="w-10 h-10 rounded-full bg-brand-teal text-on-primary flex items-center justify-center font-bold">KM</span>
+<div>
+<div class="font-label-lg text-label-lg text-text-heading">K. Mendis (Current)</div>
+<div class="font-label-sm text-label-sm text-text-secondary">Director of Enterprise Health Systems</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-brand-teal text-[24px]">check</span>
+</div>
+<div class="h-18 p-space-md rounded-xl hover:bg-surface-container flex items-center justify-between cursor-pointer active:scale-98" onclick="selectOwner('A. Perera')">
+<div class="flex items-center gap-space-md">
+<span class="w-10 h-10 rounded-full bg-header-navy text-on-primary flex items-center justify-center font-bold">AP</span>
+<div>
+<div class="font-label-lg text-label-lg text-text-heading">A. Perera</div>
+<div class="font-label-sm text-label-sm text-text-secondary">Principal FHIR Architect</div>
+</div>
+</div>
+</div>
+<div class="h-18 p-space-md rounded-xl hover:bg-surface-container flex items-center justify-between cursor-pointer active:scale-98" onclick="selectOwner('S. Wickramasinghe')">
+<div class="flex items-center gap-space-md">
+<span class="w-10 h-10 rounded-full bg-header-navy text-on-primary flex items-center justify-center font-bold">SW</span>
+<div>
+<div class="font-label-lg text-label-lg text-text-heading">S. Wickramasinghe</div>
+<div class="font-label-sm text-label-sm text-text-secondary">Chief Information Security Officer</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-end gap-space-md pt-space-xs">
+<button class="h-13 px-space-lg rounded-xl bg-surface-container text-text-heading font-label-md text-label-md" onclick="closeOwnerModal()">Cancel</button>
+</div>
+</div>
+</div>
+<!-- TOAST NOTIFICATION CONTAINER -->
+<div class="fixed bottom-12 left-1/2 -translate-x-1/2 bg-header-navy text-on-primary px-space-lg py-space-md rounded-xl shadow-2xl flex items-center gap-space-md opacity-0 pointer-events-none transition-opacity duration-300 z-50" id="toastNotification">
+<span class="material-symbols-outlined text-secondary-fixed text-[26px]">info</span>
+<span class="font-label-lg text-label-lg" id="toastMessage">Action completed successfully</span>
+</div>
+</div>
+<script>
+  // Close Drawer Action
+  function closeDrawer() {
+    const drawer = document.getElementById('projectDrawer');
+    const backdrop = document.getElementById('drawerBackdrop');
+    const underlay = document.getElementById('dimmedUnderlay');
+
+    if (drawer && backdrop) {
+      drawer.style.transform = 'translateX(100%)';
+      backdrop.style.opacity = '0';
+      if (underlay) underlay.style.opacity = '1';
+      
+      setTimeout(() => {
+        backdrop.style.display = 'none';
+        drawer.style.display = 'none';
+        showToast("Drawer dismissed. Returned to Main Command Overview.");
+      }, 300);
+    }
+  }
+
+  // Toggle Dropdown for Status Selection
+  function toggleStatusDropdown(id) {
+    // Hide all other dropdowns
+    document.querySelectorAll('[id^="dropdown-status-"]').forEach(el => {
+      if (el.id !== `dropdown-${id}`) el.classList.add('hidden');
+    });
+    const dropdown = document.getElementById(`dropdown-${id}`);
+    if (dropdown) {
+      dropdown.classList.toggle('hidden');
+    }
+  }
+
+  // Set Status Programmatically
+  function setStatus(id, text, colorClass) {
+    const label = document.getElementById(`label-${id}`);
+    if (label) {
+      label.innerText = text;
+    }
+    const dropdown = document.getElementById(`dropdown-${id}`);
+    if (dropdown) {
+      dropdown.classList.add('hidden');
+    }
+    showToast(`Status updated to "${text}"`);
+  }
+
+  // Close status dropdowns when tapping outside
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.task-row') && !e.target.closest('#projectDrawer')) {
+      document.querySelectorAll('[id^="dropdown-status-"]').forEach(el => el.classList.add('hidden'));
+    }
+  });
+
+  // Owner Switcher Dialog Handlers
+  function showOwnerSwitcher(e) {
+    e.stopPropagation();
+    const modal = document.getElementById('ownerModal');
+    if (modal) modal.classList.remove('hidden');
+  }
+
+  function closeOwnerModal() {
+    const modal = document.getElementById('ownerModal');
+    if (modal) modal.classList.add('hidden');
+  }
+
+  function selectOwner(name) {
+    closeOwnerModal();
+    showToast(`Project Owner reassigned to: ${name}`);
+  }
+
+  // Quick Action Notices
+  function openNewTaskModal() {
+    showToast("Launching Quick Task Creation for 'Registry Integration'...");
+  }
+
+  function cycleFilter(btn) {
+    const label = document.getElementById('filterLabel');
+    if (label.innerText.includes('All Tasks')) {
+      label.innerText = 'Filter: Active Only (5)';
+      showToast("Filtered view: Incomplete tasks");
+    } else {
+      label.innerText = 'Filter: All Tasks (9)';
+      showToast("Filtered view: All tasks");
+    }
+  }
+
+  function moveCategoryNotice() {
+    showToast("Opened 'Move Project' target category selector.");
+  }
+
+  function confirmArchiveSafe() {
+    const confirmed = confirm("Confirm non-destructive project archival? Active items will be frozen in Registry Archives.");
+    if (confirmed) {
+      showToast("Project moved to Staging Archive safely.");
+    }
+  }
+
+  function inspectTaskDetail(title) {
+    showToast(`Inspecting task specification: ${title}`);
+  }
+
+  function saveProjectChanges() {
+    showToast("All changes synced with Central Cloud Node.");
+    setTimeout(closeDrawer, 800);
+  }
+
+  // Global Toast Dispatcher
+  function showToast(msg) {
+    const toast = document.getElementById('toastNotification');
+    const toastMsg = document.getElementById('toastMessage');
+    if (toast && toastMsg) {
+      toastMsg.innerText = msg;
+      toast.style.opacity = '1';
+      toast.style.pointerEvents = 'auto';
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.pointerEvents = 'none';
+      }, 2600);
+    }
+  }
+</script></main></div></body></html>

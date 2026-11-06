@@ -1,0 +1,6 @@
+{
+  "name": "Project Command Centre - Executive Operations Cockpit",
+  "description": "A 75-inch interactive touchscreen project command centre with cloud persistence, Category-Project-Task hierarchy, and dynamic per-task urgency intelligence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
